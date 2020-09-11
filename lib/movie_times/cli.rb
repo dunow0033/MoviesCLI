@@ -1,9 +1,14 @@
 class MovieTimes::CLI
-    def call
-        puts "Movie times:"
+    def main
+        greet_user
+        fetch_movie_data
+    end
+    
+    def greet_user
+        puts "Welcome to the movie info app!!"
     end
 
-    def list_times
+    def fetch_movie_data
         puts "movie times"
     end
 end

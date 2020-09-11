@@ -1,3 +1,3 @@
-class ApiGrab
+class API
     
 end
