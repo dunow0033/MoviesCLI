@@ -25,6 +25,11 @@ class MovieTimes::CLI
     end
 
     def display_movie_data
-        puts "Movie Data officially displayed"
+        Movies.all.each do | movie |
+            puts "Movie: " + movie.title
+            puts "Director: " + movie.director
+            puts "Year Released: " + movie.year_released.to_s
+            puts "Rating: " + movie.rating
+        end
     end
 end

@@ -1,18 +1,32 @@
 class Movies
     attr_accessor :title, :director, :year_released, :rating
 
+    @@movies = []
+
     def initialize(title, director, year_released, rating)
         @title = title
         @director = director
         @year_released = year_released
         @rating = rating
+        @@movies << self
     end
 
     def self.movie_loop
         the_matrix = self.new("The Matrix", "Andy and Larry Wachowski", 1999, "R")
-        gladiator = self.new("Gladiator", "Rodley Scott", 2000, "R")
+        #@@movies << the_matrix
+
+        gladiator = self.new("Gladiator", "Ridley Scott", 2000, "R")
+        #@@movies << gladiator
+
         the_departed = self.new("The Departed", "Martin Scorsese", 2006, "R")
+        #@@movies << the_departed
+
         limitless = self.new("Limitless", "Neil Berger", 2011, "PG-13")
+        #@@movies << limitless
+    end
+
+    def self.all
+        @@movies
     end
 
     def self.grab_API_info
