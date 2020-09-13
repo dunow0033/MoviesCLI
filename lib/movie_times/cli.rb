@@ -1,18 +1,30 @@
-class CLI
-    def main
+
+
+class MovieTimes::CLI
+    def first
         greet_user
-        fetch_movie_data
     end
     
     def greet_user
         puts "Welcome to the movie info app!!"
+        movie = nil
+        Movies.movie_loop
+        until movie == "exit"
+            movie = prompt_for_movie_info
+            fetch_movie_data
+            display_movie_data
+        end
     end
 
     def prompt_for_movie_info
-        puts "Which movie would you like to learn more about: "
+        gets.chomp
     end
 
     def fetch_movie_data
-        puts "Use API file to grab movie data!!"
+        puts Movies.grab_API_info
+    end
+
+    def display_movie_data
+        puts "Movie Data officially displayed"
     end
 end
