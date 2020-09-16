@@ -1,5 +1,5 @@
-class Movies
-    attr_accessor :title, :director, :year_released, :rating
+class MovieTimes::Movies
+    attr_accessor :title, :director, :date_released, :rating
 
     @@movies = []
 
@@ -11,19 +11,15 @@ class Movies
         limitless = self.new("Limitless", "Neil Berger", 2011, "PG-13")
     end
 
-    def initialize(title, director, year_released, rating)
+    def initialize(title, director, date_released, rating)
         @title = title
         @director = director
-        @year_released = year_released
+        @date_released = date_released
         @rating = rating
         @@movies << self
     end
 
     def self.all
         @@movies
-    end
-
-    def self.grab_API_info
-        "Grab API info!!"
     end
 end
