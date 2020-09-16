@@ -22,4 +22,8 @@ class MovieTimes::Movies
     def self.all
         @@movies
     end
+
+    def self.last
+        @@movies.last
+    end
 end
