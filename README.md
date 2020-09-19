@@ -1,29 +1,21 @@
 <<<<<<< HEAD
 # MovieTimes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/movie_times`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This app gives trivia about movie titles that the user enters
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'movie_times'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install movie_times
+  1.  clone github repository
+  2.  run "bundle install"
+  3.  run "ruby/bin/movie-times"
 
 ## Usage
 
-TODO: Write usage instructions here
+when running the app, enter a movie title at the first prompt.  You will get a response giving you four bits of movie trivia.  You will then be asked
+if you want some additional movie trivia.  You can enter 'y' to get the next bit of movie trivia or 'n' to enter a different movie.  At this prompt,
+if you enter an invalid response, you will be taken back to the beginning of the app and asked to enter a different movie title.  If you hit 'y',
+you will be taken back to the beginning to be asked for a different movie title again, and the process starts all over again.  If you hit 'q' at either
+prompt where you are asked for a movie title, you will exit the program.
 
 ## Development
 
@@ -33,7 +25,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/movie_times. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/movie_times/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/dunow33/movie_times. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/dunow33/movie_times/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
