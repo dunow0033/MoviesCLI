@@ -3,13 +3,11 @@ class MovieTimes::Movies
 
     @@movies = []
 
-    MovieTimes::Movies.new(@title, @director, @writer, @actors, @plot, @date_released, @rating, @awards)
-
     def initialize(title, director, writer, actors, plot, date_released, rating, awards)
         @title = title
         @director = director
         @writer = writer
-        @actors = actor
+        @actors = actors
         @plot = plot
         @date_released = date_released
         @rating = rating

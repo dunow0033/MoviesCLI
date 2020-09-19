@@ -6,23 +6,23 @@ class MovieTimes::CLI
     end
     
     def greet_user
-        # puts "Welcome to the movie info app!!"
-        # puts
-        # print "Please enter a movie title:  "
-        # movie = prompt_for_movie_info
-        # while movie != "q"
-        #     while MovieTimes::API.checkForInvalidMovie(movie) == nil
-        #         puts
-        #         print "Invalid movie title, please try again (or 'q' to quit):  "
-        #         movie = prompt_for_movie_info
-        #     end
-            MovieTimes::API.movieInfo("The Matrix")
-        #     display_movie_data
-        #     movie = next_movie
-        # end
-        # puts
-        # puts "Thank you!!"
-        # puts
+        puts "Welcome to the movie info app!!"
+        puts
+        print "Please enter a movie title:  "
+        movie = prompt_for_movie_info
+        while movie != "q"
+            while MovieTimes::API.checkForInvalidMovie(movie) == nil
+                puts
+                print "Invalid movie title, please try again (or 'q' to quit):  "
+                movie = prompt_for_movie_info
+            end
+            MovieTimes::API.movieInfo(movie)
+            display_movie_data
+            movie = next_movie
+        end
+        puts
+        puts "Thank you!!"
+        puts
     end
 
     def prompt_for_movie_info
@@ -41,5 +41,13 @@ class MovieTimes::CLI
         puts "Director: " + MovieTimes::Movies.last.director.to_s
         puts "Date Released: " + MovieTimes::Movies.last.date_released.to_s
         puts "Rating: " + MovieTimes::Movies.last.rating.to_s
+        puts
+        puts
+        puts "Writer: " + MovieTimes::Movies.last.writer.to_s
+        puts "Actors: " + MovieTimes::Movies.last.actors.to_s
+        puts "Plot: " + MovieTimes::Movies.last.plot.to_s
+        puts "Awards: " + MovieTimes::Movies.last.awards.to_s
+        puts
+        puts
     end
 end
