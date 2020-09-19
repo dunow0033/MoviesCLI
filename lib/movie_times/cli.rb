@@ -73,10 +73,10 @@ class MovieTimes::CLI
     #attributes of that movie
     def display_movie_data
         puts
-        puts "Movie: " + MovieTimes::Movies.last.title.to_s
-        puts "Director: " + MovieTimes::Movies.last.director.to_s
-        puts "Date Released: " + MovieTimes::Movies.last.date_released.to_s
-        puts "Rating: " + MovieTimes::Movies.last.rating.to_s
+        puts "Movie: " + MovieTimes::Movies.last.title
+        puts "Director: " + MovieTimes::Movies.last.director
+        puts "Date Released: " + MovieTimes::Movies.last.date_released
+        puts "Rating: " + MovieTimes::Movies.last.rating
         puts
         puts
     end
@@ -103,10 +103,10 @@ class MovieTimes::CLI
     #function to display additional movie trivia
     def additional_movie_data
         puts
-        puts "Writer: " + MovieTimes::Movies.last.writer.to_s
-        puts "Actors: " + MovieTimes::Movies.last.actors.to_s
-        puts "Plot: " + MovieTimes::Movies.last.plot.to_s
-        puts "Awards: " + MovieTimes::Movies.last.awards.to_s
+        puts "Writer: " + MovieTimes::Movies.last.writer
+        puts "Actors: " + MovieTimes::Movies.last.actors
+        puts "Plot: " + MovieTimes::Movies.last.plot
+        puts "Awards: " + MovieTimes::Movies.last.awards
         puts
         puts
     end
