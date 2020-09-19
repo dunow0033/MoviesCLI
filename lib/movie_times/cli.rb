@@ -6,20 +6,23 @@ class MovieTimes::CLI
     end
     
     def greet_user
-        puts "Welcome to the movie info app!!"
-        puts
-        print "Please enter a movie title:  "
-        movie = prompt_for_movie_info
-        while movie != "q"
-            while MovieTimes::API.checkForInvalidMovie(movie) == nil
-                puts
-                print "Invalid movie title, please try again (or 'q' to quit):  "
-                movie = prompt_for_movie_info
-            end
-            MovieTimes::API.movieInfo(movie)
-            display_movie_data
-            movie = next_movie
-        end
+        # puts "Welcome to the movie info app!!"
+        # puts
+        # print "Please enter a movie title:  "
+        # movie = prompt_for_movie_info
+        # while movie != "q"
+        #     while MovieTimes::API.checkForInvalidMovie(movie) == nil
+        #         puts
+        #         print "Invalid movie title, please try again (or 'q' to quit):  "
+        #         movie = prompt_for_movie_info
+        #     end
+            MovieTimes::API.movieInfo("The Matrix")
+        #     display_movie_data
+        #     movie = next_movie
+        # end
+        # puts
+        # puts "Thank you!!"
+        # puts
     end
 
     def prompt_for_movie_info

@@ -22,14 +22,22 @@ class MovieTimes::API
                 @title = "#{value}"
             elsif key == "Director"
                 @director = "#{value}"
+            elsif key == "Writer"
+                @writer = "#{value}"
+            elsif key == "Actors"
+                @actors = "#{value}"
+            elsif key == "Plot"
+                @plot = "#{value}"
             elsif key == "Released"
                 @date_released = "#{value}"
             elsif key == "Rated"
                 @rating = "#{value}"
+            elsif key == "Awards"
+                @awards = "#{value}"
             end
         end
 
-        MovieTimes::Movies.new(@title, @director, @date_released, @rating)
+        MovieTimes::Movies.new(@title, @director, @writer, @actors, @plot, @date_released, @rating, @awards)
     end
 
     def self.checkForInvalidMovie(name)
@@ -46,9 +54,5 @@ class MovieTimes::API
         else
             return true
         end
-    end
-
-    def self.scrapeTrivia
-        #scrape a site for trivia about movie
     end
 end
