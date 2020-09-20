@@ -3,6 +3,28 @@
 
 This app gives trivia about movie titles that the user enters
 
+Descriptions for each class used:
+
+cli class -- loop taking in user input of movie title, calling api class
+		on each selection.  loop first checks for valid movie title, and after the first set of trivia,
+    it asks the user if they want to see more trivia.  they can see more trivia or move on to the 
+    next movie.loop ends when user enters 'q'
+
+	movies class -- initialized and defines the characteristics of each movie:
+
+		title, director, writer, actors, plot, date released, rating, awards
+
+		has array containing all movies entered, and a last method retrieving the last
+		movie selected to display the information for the movie that was just entered
+
+  api class -- forms the url from the api containing the movie facts, parsed the json from this url
+		loops through each json object, grabbing the facts from the json object
+
+		after that loop is completed, makes a movie object containing the movie facts obtained
+		from the loop
+
+    also contains a function to check if the movie title entered was valid or not
+
 ## Installation
 
   Add this line to your application's Gemfile:
