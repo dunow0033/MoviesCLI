@@ -5,6 +5,11 @@ This app gives trivia about movie titles that the user enters
 
 ## Installation
 
+  Add this line to your application's Gemfile:
+    gem 'movie-times'
+
+  And then:
+
   1.  clone github repository
   2.  run "bundle install"
   3.  run "ruby/bin/movie-times"
